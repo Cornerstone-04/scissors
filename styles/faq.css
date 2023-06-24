@@ -1,0 +1,104 @@
+.faq {
+  margin: 0 auto;
+  padding: 4rem 2rem 9rem 2rem;
+  width: 100%;
+  max-width: 49.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.faq header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.faq header h2 {
+  font-size: 2.5rem;
+}
+
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion button {
+  position: relative;
+  /* display: block;*/
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+  width: 100%;
+  padding: 1rem 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.accordion button .accordion-title {
+  padding: 0;
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.accordion button .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem 0;
+
+}
+.accordion button .icon::before {
+  /* display: block;
+  position: absolute; */
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  /* display: block;
+  position: absolute; */
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded="true"] {
+  color: var(--text);
+}
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
