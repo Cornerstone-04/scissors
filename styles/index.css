@@ -147,6 +147,7 @@ nav .cta-buttons a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero header {
@@ -156,12 +157,21 @@ nav .cta-buttons a {
   gap: 0.5rem;
   padding-bottom: 2rem;
   color: var(--text);
+  position: relative;
 }
 
 .hero header h1.title {
   font-weight: 700;
   font-size: 3rem;
   line-height: 6rem;
+  position: relative;
+}
+
+.hero header img.blue-stroke {
+  position: absolute;
+  bottom: 0.76rem;
+  left: 24rem;
+  transform: translateX(50%);
 }
 
 .title span {
@@ -174,6 +184,47 @@ nav .cta-buttons a {
   width: min(100%, 48.8rem);
   margin-inline: auto;
 }
+
+/* .hero .box {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.hero .box .container {
+  width: min(100%, 700px);
+  display: inline-flex;
+  padding: 2.5rem 3.75rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 24px;
+  border: 0.5px solid var(--primary-400);
+  background: #fefefe;
+  backdrop-filter: blur(106px);
+  position: relative;
+  z-index: 1;
+}
+
+.hero .box p {
+  z-index: 1;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin-inline: auto;
+}
+
+.hero .box .box-bg {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+} */
+
+.oval {
+  width: 100%;
+}
+
 .hero .cta-buttons {
   gap: 3.5rem;
   margin-inline: auto;
@@ -407,7 +458,11 @@ section.hero-2 {
 /* form section */
 section.test {
   width: 100%;
-  background: linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  background: var(--linear-gradient);
+  background-image: url("../assets/icons/blue-bg-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-block: 5.2rem;
   display: flex;
   align-items: center;
@@ -482,7 +537,12 @@ section.test form .form-note a {
 /* small hero */
 section.hero-small {
   width: 100%;
-  background: linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  background: var(--linear-gradient);
+  background: var(--linear-gradient);
+  background-image: url("../assets/icons/blue-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 9rem 0 6.5rem 0;
   display: flex;
   justify-content: center;
@@ -503,6 +563,11 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  background-image: url("../assets/icons/white-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 footer .container {
@@ -515,6 +580,7 @@ footer .container {
   padding-block: 5.12rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  background: transparent;
 }
 
 footer section.logo-socials {
